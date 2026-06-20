@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom Brand Color Palette */
+  --color-brand-ocean: #0a2d42;
+  --color-brand-ocean-light: #164e63;
+  --color-brand-ocean-accent: #22d3ee;
+  
+  --color-brand-sand: #f5ebe0;
+  --color-brand-sand-light: #faf7f2;
+  --color-brand-sand-dark: #e3d5ca;
+  --color-brand-sand-accent: #d4af37;
+  
+  --color-brand-sunset: #e0533c;
+  --color-brand-sunset-light: #ff7d66;
+  --color-brand-sunset-dark: #b82c16;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom visual utilities */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-brand-ocean);
+  color: #ffffff;
+}
+
+body {
+  background-color: #faf9f6;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+/* Fine gradients and parallax card overlays */
+.luxury-text-gradient {
+  background: linear-gradient(135deg, var(--color-brand-ocean) 0%, var(--color-brand-ocean-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luxury-sunset-gradient {
+  background: linear-gradient(135deg, var(--color-brand-sunset) 0%, var(--color-brand-sunset-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luxury-blur-overlay {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Hide scrollbars but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Travellers Travels Nagpur",
+  "description": "Premium bespoke travel experiences, luxury getaways, and curated itineraries by Travellers Travels Nagpur.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
